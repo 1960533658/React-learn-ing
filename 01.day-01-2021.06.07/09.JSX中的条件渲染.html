@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./lib/react.development.js"></script>
+  <script src="./lib/react-dom.development.js"></script>
+  <script src="./lib/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+
+  </div>
+  <script type="text/babel">
+    /**
+     * if/else
+     * 三元表达式
+     * 逻辑与运算符
+     */
+
+    // if/else
+      let flag = true
+    //  function Home() {
+    //    if(flag) {
+    //      return (
+    //        <p>我是为true的渲染</p>
+    //        )
+    //    }else {
+
+    //     return (
+    //      <p>我是为false的渲染</p>
+    //     )
+    //    }
+
+    //  }
+
+    // 三元表达式
+    // function Home() {
+    //   if (flag) {
+    //     return flag ? (
+    //       <p>我是为true的渲染</p>
+    //     ) : (
+    //         <p>我是为false的渲染</p>
+    //       )
+    //   }
+    // }
+
+    // 逻辑运算符
+    function Home() {
+      return false && (<p>我是为false的渲染</p>)
+    }
+    
+    ReactDOM.render(<Home />, document.querySelector('#app'))
+  </script>
+</body>
+
+</html>

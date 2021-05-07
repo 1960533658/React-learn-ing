@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 虚拟包 -->
+  <script src="./lib/react.development.js"></script>
+  <!-- 渲染包 -->
+  <script src="./lib/react-dom.development.js"></script>
+  <!-- babel JSX语法包 -->
+  <script src="./lib/babel.min.js"></script>
+</head>
+<body>
+  <div id="app">
+
+  </div>
+  <script type="text/babel">
+    function Home() {
+      return (
+        <div>
+          <p>{1 + 2}</p>
+          <p>{[1, 2].join("_")}</p>
+          <p>{[].toString}</p>
+          <p>{undefined}</p>
+          <p>{undefined+""}</p>
+          <p>{true}</p>
+          <p>{true+""}</p>
+          <p>{1 + 2}</p>
+          <p>{1 + 2}</p>
+        </div>
+      )
+      }
+    ReactDOM.render(<Home />, document.querySelector("#app"))
+  </script>
+</body>
+</html>

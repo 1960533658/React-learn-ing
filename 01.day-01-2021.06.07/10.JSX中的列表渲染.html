@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./lib/react.development.js"></script>
+  <script src="./lib/react-dom.development.js"></script>
+  <script src="./lib/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+
+  </div>
+  <script type="text/babel">
+    const star = [
+      {
+        name: "高圆圆",
+        age: 33
+      },
+      {
+        name: "阿屎",
+        age: 32
+      }
+    ]
+
+    // 定义组件
+    function Hoem() {
+      return (
+        <ul>{
+          star.map((item, index) => {
+            // 循环需要key属性
+            return <li key={index}>{item.name}</li>
+          })
+        }</ul>
+      )
+    }
+
+    // 挂载
+    ReactDOM.render(<Hoem />, document.querySelector('#app'))
+  </script>
+</body>
+
+</html>

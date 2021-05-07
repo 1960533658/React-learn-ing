@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./lib/react.development.js"></script>
+  <script src="./lib/react-dom.development.js"></script>
+  <script src="./lib/babel.min.js"></script>
+  <style>
+    .box {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <div id="app">
+
+  </div>
+  <script type="text/babel">
+  /** 
+   * ! 1. JSX绑定内容 
+   * * 在JSX中只要看见{} 就会当作js解析
+   * * 无论是绑定类名还是绑定样式只要将字符串改为{}包裹然后通过JS动态获取，动态绑定即可
+   * 
+   * ! 绑定普通属性
+   * - <p title="我是标题">我是段落</p>
+   * - <p title={message}>我是段落</p>
+   * 
+   * ! 绑定类名
+   * + 由于JSX本质是转换成JS代码，而在JS中class有特殊含义，所以不能使用
+   *    -同理，但凡是属性名称是JS关键字的都不能直接使用
+   * ! 绑定样式
+   * + 由于样式是键值对形式的，所以在JSX中想要动态绑定样式你也需要将样式放到一个对象中
+   * 并且所有以-链接的样式名称都要转换成驼峰命名
+   * + <p style={{color: "red",fontSize="100px"}}></p>
+   */
+   function Home() {
+    return (<div title={"newTitle"} className={"box"} style={{fontSize: "100px"}}>你好</div>)
+   }
+
+    // 挂载
+    ReactDOM.render(<Home />, document.querySelector('#app'))
+  </script>
+</body>
+
+</html>

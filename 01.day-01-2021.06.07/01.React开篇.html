@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 命令式和声明式
+    // 1. DOM操作（命令式--》 面向过程）
+    // 1.1 获取元素
+    // 1.2 oDiv.innerHTML = "XXX"
+    // 1.3 渲染
+    
+    // 2. vue|| react(声明式 --》面向对象)
+    <div id="app">{{message}}</div>
+    createApp({
+      data() {
+        return {
+          message: "nihao"
+        }
+      }
+    })
+  </script>
+</body>
+</html>
