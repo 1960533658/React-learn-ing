@@ -1,0 +1,117 @@
+/* xxx-enter 进入动画执行前绑定的类名 */
+/* xxx-enter-active 进入动画执行中绑定的类名 */
+/* xxx-enter-done 进入动画执行完毕绑定的类名 */
+
+.box-enter {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  background-color: gold;
+}
+
+.box-enter-active {
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+  background-color: gold;
+  transition: all 3s;
+}
+
+.box-enter-done {
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+  background-color: gold;
+}
+
+/* xxx-exit 退出动画执行前绑定的类名 */
+/* xxx-exit-active 退出动画执行中绑定的类名 */
+/* xxx-exit-done 退出动画执行完毕绑定的类名 */
+.box-exit {
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+  background-color: gold;
+}
+
+.box-exit-active {
+  width: 0;
+  height: 0;
+  opacity: 1;
+  background-color: gold;
+  transition: all 3s;
+}
+
+.box-exit-done {
+  width: 0;
+  height: 0;
+  opacity: 1;
+  background-color: gold;
+}
+
+.box-appear {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  background-color: green;
+  transition: all 3s;
+}
+
+.box-appear-active {
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+  background-color: green;
+}
+
+.box-appear-done {
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+  background-color: green;
+}
+
+.box2-enter {
+  width: 120px;
+  height: 40px;opacity: 0;
+  opacity: 0;
+  transform: translate(-100%);
+}
+.box2-enter-active {
+  width: 120px;
+  height: 40px;
+  opacity: 1;
+  transform: translate(0%);
+  transition: all 1s;
+}
+.box2-enter-done {
+  width: 120px;
+  height: 40px;
+  opacity: 1;
+  transform: translate(0%);
+}
+
+.box2-exit {
+  width: 120px;
+  height: 40px;
+  opacity: 1;
+  transform: translate(0%);
+}
+.box2-exit-active {
+  width: 120px;
+  height: 40px;
+  opacity: 1;
+  transform: translate(100%);
+}
+.box2-exit-done {
+  width: 120px;
+  height: 40px;
+  opacity: 1;
+  transform: translate(100%);
+}
+button {
+  display: block;
+  width: 120px;
+  height: 40px;
+  margin: 0 auto;
+}
