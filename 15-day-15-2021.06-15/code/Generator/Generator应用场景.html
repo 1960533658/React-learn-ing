@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function* sayhi() {
+      yield "第一个yield"
+      const awa = yield "第二个yield"
+      console.log(awa)
+      yield "第三个yield"
+    }
+    const done = sayhi()
+    console.log(done.next())
+    console.log(done.next())
+    console.log(done.next(5)) // 传递的值会由上一个yield的返回值获取到，也就是说，我是第三个调用的next传递的值，最总会由第二个awa获取到传递的值
+  </script>
+</body>
+
+</html>

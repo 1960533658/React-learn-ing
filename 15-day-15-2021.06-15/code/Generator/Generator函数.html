@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // function sayhi() {
+
+    // }
+    // console.log(sayhi()) // undefined
+
+    // function* sayhi() {
+
+    // }
+    // console.log(sayhi());// 打印出迭代器对象
+
+    function* sayhi() {
+      console.log(111)// 调用之后第一步执行
+      yield "kangkang"; 
+      console.log("Spring_Long")
+      yield "longlong"
+    }
+    // console.log(sayhi().next());// 
+    // console.log(sayhi().next());// 
+    // console.log(sayhi().next());// 
+
+    const done = sayhi()
+    console.log(done.next().value);// kangkang
+    console.log(done.next().value);// Spring_Long
+    console.log()
+  </script>
+</body>
+
+</html>

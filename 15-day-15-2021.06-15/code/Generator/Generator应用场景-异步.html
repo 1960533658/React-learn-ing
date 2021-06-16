@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function request(fn) {
+      return new Promise(function (resolve, reject) {
+        setTimeout(() => {
+          resolve("拿到的数据")
+        }, 1000);
+      })
+    }
+
+    // request()
+    //   .then(function (data) {
+    //     console.log(data, "1")
+    //     return request()
+    //   })
+    //   .then(function (data) {
+    //     console.log(data, "2")
+    //     return request()
+    //   })
+    //   .then(function (data) {
+    //     console.log(data, "3")
+    //   })
+
+    function* gen() {
+      yield request();
+      yield request();
+      yield request();
+    }
+
+    const it = gen();
+    it.next().value.then(function(data) {
+        console.log(data, "1")
+        return it.next().value
+    }).then(function (data) {
+      console.log(data, "2")
+      return it.next().value
+    }).then(function (data) {
+      console.log(data, "3")
+      return it.next().value
+    })
+  </script>
+</body>
+
+</html>
